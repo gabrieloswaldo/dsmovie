@@ -1,6 +1,7 @@
 import Button from "components/Button";
 import SelectInput from "components/SelectInput";
 import TextInput from "components/TextInput";
+import { Link } from "react-router-dom";
 import "./styles.css";
 
 const Form = (): JSX.Element => {
@@ -37,7 +38,9 @@ const Form = (): JSX.Element => {
             <Button buttonType="submit" text="Save" />
           </div>
         </form>
-        <Button buttonType="button" text="Cancel" customClassName="mt-3" />
+        <Link to="/">
+          <Button buttonType="button" text="Cancel" customClassName="mt-3" />
+        </Link>
       </div>
     </div>
   );
