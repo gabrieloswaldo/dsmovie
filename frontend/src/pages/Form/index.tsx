@@ -1,3 +1,4 @@
+import Button from "components/Button";
 import SelectInput from "components/SelectInput";
 import TextInput from "components/TextInput";
 import "./styles.css";
@@ -33,12 +34,10 @@ const Form = (): JSX.Element => {
             selectId="score"
           />
           <div className="dsmovie-form-btn-container">
-            <button type="submit" className="btn btn-primary dsmovie-btn">
-              Save
-            </button>
+            <Button buttonType="submit" text="Save" />
           </div>
         </form>
-        <button className="btn btn-primary dsmovie-btn mt-3">Cancel</button>
+        <Button buttonType="button" text="Cancel" customClassName="mt-3" />
       </div>
     </div>
   );
