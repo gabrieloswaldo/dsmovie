@@ -1,0 +1,26 @@
+spring:
+  datasource:
+    url: "jdbc:postgresql://localhost:5432/dsmovie"
+    username: "postgres"
+    password: "1234567"
+  jpa:
+    properties:
+      hibernate:
+        jdbc:
+          lob:
+            non_contextual_creation: true
+    hibernate:
+      ddl-auto: none
+    # For SQL script generation
+#    jpa:
+#      properties:
+#        hibernate:
+#          hbm2ddl:
+#            delimiter: ";"
+#        javax:
+#          persistence:
+#            schema-generation:
+#              create-source: metadata
+#              scripts:
+#                action: create
+#                create-target: create-sql
