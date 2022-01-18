@@ -4,6 +4,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
 
 @Data
 @NoArgsConstructor
@@ -22,4 +24,7 @@ public class Movie {
     private Integer count;
 
     private String image;
+
+    @OneToMany(mappedBy = "id.movie")
+    private Set<Score> scores = new HashSet<>();
 }
