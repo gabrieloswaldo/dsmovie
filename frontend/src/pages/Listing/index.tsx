@@ -28,9 +28,13 @@ const Listing = (): JSX.Element => {
       });
   }, [pageNumber]);
 
+  const handlePageChange = (newPageNumber: number): void => {
+    setPageNumber(newPageNumber);
+  };
+
   return (
     <>
-      <Pagination />
+      <Pagination page={page} onChange={handlePageChange} />
       <div className="container">
         <div className="row">
           {page.content.map((movie) => (
