@@ -1,7 +1,7 @@
 import MovieCard from "components/MovieCard";
 import Pagination from "components/Pagination";
 import { useEffect, useState } from "react";
-import api from "services/api";
+import { api } from "services/api";
 import { MoviePage } from "services/types";
 
 const Listing = (): JSX.Element => {
@@ -22,7 +22,7 @@ const Listing = (): JSX.Element => {
     api
       // TODO: make the size selectable
       .get(`/movies?size=12&page=${pageNumber}&sort=title`)
-      .then((response) => {
+      .then((response: { data: MoviePage }) => {
         const movies: MoviePage = response.data;
         setPage(movies);
       });
