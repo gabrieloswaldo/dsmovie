@@ -17,7 +17,7 @@ const MovieCard = ({ movie }: Props): JSX.Element => {
       ></img>
       <div className="dsmovie-card-bottom-container">
         <h3>{movie.title}</h3>
-        <MovieScore />
+        <MovieScore score={movie.score} count={movie.count} />
         <Link to={`/form/${movie.id}`}>
           <Button text="Review" />
         </Link>
